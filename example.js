@@ -12,5 +12,8 @@ var transloadit = new TransloaditXhr({
   }
 });
 
-var file = $('#file_input').get(0).files[0];
-transloadit.uploadFile(file);
+$("#file_input").change(function() {
+  var file = $('#file_input').get(0).files[0];
+  console.log("Upload started");
+  transloadit.uploadFile(file);
+});
